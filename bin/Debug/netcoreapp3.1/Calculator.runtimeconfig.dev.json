@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\raitr\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\raitr\\.nuget\\packages"
+    ]
+  }
+}
