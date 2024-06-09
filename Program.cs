@@ -9,6 +9,7 @@ namespace Calculator
            Menu();
         }
 
+        //Chamando a função menu
         static void Menu()
         {
             Console.Clear();
@@ -21,7 +22,7 @@ namespace Calculator
 
             Console.WriteLine("------------------");
             Console.WriteLine("Selecione uma opção: ");
-            short res = short.Parse(Console.ReadLine());
+            short res = short.Parse(Console.ReadLine());//Console.ReadLine irá ler o comando
         }
         //Método para somar
         static void Soma()
