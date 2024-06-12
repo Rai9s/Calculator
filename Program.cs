@@ -23,6 +23,16 @@ namespace Calculator
             Console.WriteLine("------------------");
             Console.WriteLine("Selecione uma opção: ");
             short res = short.Parse(Console.ReadLine());//Console.ReadLine irá ler o comando
+            
+            switch(res){
+                case 1: Soma(); break;
+                case 2: Subtracao(); break;
+                case 3: Divisao(); break;
+                case 4: Multiplicacao(); break;
+                default: Menu(); break;
+            }
+        
+        
         }
         //Método para somar
         static void Soma()
@@ -41,6 +51,7 @@ namespace Calculator
             // Console.WriteLine("O resultado da soma é: " + resultado);
             Console.WriteLine($"O resultado da soma é: {resultado} ");
             Console.ReadKey();
+            Menu();
         }
 
         //Método para Subtrair
@@ -59,6 +70,7 @@ namespace Calculator
             float resultado = v1 - v2;
             Console.WriteLine($"O resultado da subtração é: {resultado}");
             Console.ReadKey();
+            Menu();
         }
     
         //Método para Divisão 
@@ -77,6 +89,7 @@ namespace Calculator
             float resultado = v1 / v2;
             Console.WriteLine($"O resultado da divisão é: {resultado}");
             Console.ReadKey();
+            Menu();
         }
 
         //Método para Multiplicação
@@ -94,7 +107,7 @@ namespace Calculator
             float resultado = v1 * v2;
             Console.WriteLine($"O resultado da multiplicação é: {resultado}");
             Console.ReadKey();
-        
+            Menu();
         }
     
     
