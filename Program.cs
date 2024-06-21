@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Schema;
 
 namespace Calculator
 {
@@ -19,7 +20,8 @@ namespace Calculator
             Console.WriteLine("2 - Subtração");
             Console.WriteLine("3 - Divisão");
             Console.WriteLine("4 - Multiplicação");
-            Console.WriteLine("5 - Sair");
+            Console.WriteLine("5 - Porcentagem");
+            Console.WriteLine("6 - Sair");
 
             Console.WriteLine("------------------");
             Console.WriteLine("Selecione uma opção: ");
@@ -30,7 +32,8 @@ namespace Calculator
                 case 2: Subtracao(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicacao(); break;
-                case 5: System.Environment.Exit(0); break; // Environment é o ambiente que estamos, 0 confirma que saiu com sucesso  
+                case 5: Porcentagem(); break;
+                case 6: System.Environment.Exit(0); break; // Environment é o ambiente que estamos, 0 confirma que saiu com sucesso  
                 default: Menu(); break;
             }
         
@@ -110,6 +113,30 @@ namespace Calculator
             Console.WriteLine($"O resultado da multiplicação é: {resultado}");
             Console.ReadKey();
             Menu();
+        }
+
+        static void Porcentagem(){
+            Console.Clear();
+
+            Console.WriteLine("Valor total: ");
+            float v1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Valor da parte: ");
+            float v2 = float.Parse(Console.ReadLine());
+            
+            Console.WriteLine("");
+
+            if(v1 != 0)
+            {
+                float porcentagem = (v2 / v1) * 100;
+                Console.WriteLine($"A porcentagem é: {porcentagem}%");
+            }
+            else
+            {
+                Console.WriteLine("O valor total não pode ser zero");
+            }
+            Console.ReadKey();
+            Menu();
+
         }
     
     
